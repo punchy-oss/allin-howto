@@ -4,279 +4,699 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>วิธีเปิดพอร์ต Forex | All In Academy</title>
+  <meta name="description" content="สมัครเปิดพอร์ต Forex กับ All In Academy ทำตามทีละขั้นตอน ใช้เวลาไม่นาน" />
 
   <style>
+    :root {
+      --bg: #eef2f8;
+      --card: rgba(255,255,255,0.9);
+      --text: #14213d;
+      --muted: #667085;
+      --blue-1: #08142f;
+      --blue-2: #16388f;
+      --blue-3: #2b5cff;
+      --yellow-1: #ffd84d;
+      --yellow-2: #f7c80b;
+      --line: rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 18px 50px rgba(19, 42, 105, 0.10);
+      --shadow-md: 0 10px 30px rgba(19, 42, 105, 0.08);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background: #f5f7fb;
-      color: #1f2937;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(43,92,255,0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(247,200,11,0.08), transparent 20%),
+        var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
     .container {
-      width: 100%;
-      max-width: 960px;
+      width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 20px;
+    }
+
+    .section-space {
+      margin-top: 28px;
+    }
+
+    /* HERO */
+    .hero-wrap {
+      padding: 28px 0 12px;
     }
 
     .hero {
-      background: linear-gradient(135deg, #0f172a, #1d4ed8);
-      color: white;
-      padding: 50px 25px;
-      border-radius: 24px;
-      text-align: center;
-      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 36px;
+      padding: 42px 28px 36px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,0.20), transparent 28%),
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.10), transparent 18%),
+        linear-gradient(135deg, var(--blue-1) 0%, #173378 42%, var(--blue-3) 100%);
+      box-shadow: 0 28px 70px rgba(15, 35, 90, 0.18);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: #fff;
+      isolation: isolate;
     }
 
-    /* 🔥 โลโก้ */
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(8px);
+      z-index: -1;
+    }
+
+    .hero::before {
+      width: 320px;
+      height: 320px;
+      right: -120px;
+      top: -120px;
+      background: rgba(255,255,255,0.10);
+    }
+
+    .hero::after {
+      width: 240px;
+      height: 240px;
+      left: -80px;
+      bottom: -80px;
+      background: rgba(255, 216, 77, 0.12);
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .logo-wrap {
+      width: 156px;
+      height: 156px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ffffff 0%, #f2f6ff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        0 16px 38px rgba(0,0,0,0.22),
+        0 0 0 8px rgba(255,255,255,0.08);
+      position: relative;
+    }
+
+    .logo-wrap::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0) 72%);
+      z-index: -1;
+    }
+
     .logo {
-  width: 130px;
-  height: 130px;
-  object-fit: contain;
+      width: 92px;
+      height: 92px;
+      object-fit: contain;
+    }
 
-  background: #fff;
-  border-radius: 50%;
-  padding: 18px;
+    .hero-content {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
 
-  margin-bottom: 25px;
-
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-  border: 2px solid rgba(255,255,255,0.6);
-}
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.14);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(6px);
+    }
 
     .hero h1 {
-      font-size: 34px;
-      margin-bottom: 12px;
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+      text-shadow: 0 5px 18px rgba(0,0,0,0.18);
     }
 
     .hero p {
-      font-size: 18px;
-      opacity: 0.95;
-      margin-bottom: 20px;
+      font-size: clamp(16px, 2vw, 22px);
+      font-weight: 500;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 28px;
     }
 
-    .btn {
-      display: inline-block;
-      background: #facc15;
-      color: #111827;
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 58px;
+      padding: 0 28px;
+      border-radius: 16px;
       text-decoration: none;
-      font-weight: bold;
-      padding: 14px 24px;
-      border-radius: 12px;
-      transition: 0.2s;
+      font-weight: 800;
+      font-size: 18px;
+      transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
     }
 
-    .btn:hover {
-      opacity: 0.9;
+    .btn-primary {
+      background: linear-gradient(180deg, var(--yellow-1) 0%, var(--yellow-2) 100%);
+      color: #111827;
+      box-shadow: 0 14px 28px rgba(247, 200, 11, 0.28);
     }
 
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 24px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 32px rgba(247, 200, 11, 0.34);
     }
 
-    .step-title {
-      font-size: 24px;
-      color: #1d4ed8;
-      margin-bottom: 10px;
+    .btn-secondary {
+      background: rgba(255,255,255,0.10);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(6px);
     }
 
-    .step-sub {
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.14);
+    }
+
+    /* OVERVIEW */
+    .overview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .overview-card {
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.60);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .overview-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #3157d5;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .overview-text {
+      font-size: 15px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* MAIN */
+    .section-head {
+      text-align: center;
+      margin: 38px 0 20px;
+    }
+
+    .section-head span {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 800;
+      color: #3157d5;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .section-head p {
+      color: var(--muted);
       font-size: 16px;
-      margin-bottom: 16px;
-      color: #4b5563;
+    }
+
+    .steps {
+      display: grid;
+      gap: 20px;
+    }
+
+    .step-card {
+      position: relative;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .step-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      min-width: 56px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #2f5cff 0%, #1f45cb 100%);
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+      box-shadow: 0 12px 24px rgba(43,92,255,0.22);
+    }
+
+    .step-heading h3 {
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.15;
+      color: #1d4ed8;
+      margin-bottom: 6px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+    }
+
+    .step-heading p {
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .step-layout {
+      display: grid;
+      grid-template-columns: 1.45fr 0.9fr;
+      gap: 18px;
+      align-items: stretch;
     }
 
     .image-box {
-      width: 100%;
-      aspect-ratio: 16/9;
-      border-radius: 16px;
       overflow: hidden;
-      margin-bottom: 18px;
-      background: #f8fafc;
+      border-radius: 22px;
+      background: #e8edf7;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5);
+      min-height: 340px;
     }
 
     .image-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 20%;
+      object-position: center 18%;
     }
 
     .info-box {
-      background: #eff6ff;
+      background: linear-gradient(180deg, rgba(239,246,255,0.95) 0%, rgba(231,240,255,0.92) 100%);
+      border: 1px solid rgba(37,99,235,0.10);
       border-left: 5px solid #2563eb;
-      padding: 16px;
-      border-radius: 12px;
-      margin-top: 14px;
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.65);
+    }
+
+    .info-box h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .info-box p,
+    .info-box li {
+      font-size: 15px;
+      color: #334155;
     }
 
     .info-box ul {
       padding-left: 20px;
       margin-top: 8px;
+      display: grid;
+      gap: 8px;
     }
 
+    .info-box .link-box {
+      margin-top: 10px;
+      word-break: break-word;
+      font-weight: 700;
+      color: #1d4ed8;
+    }
+
+    /* CTA */
     .cta {
-      background: #111827;
-      color: white;
+      position: relative;
+      overflow: hidden;
+      margin: 28px 0 16px;
+      border-radius: 30px;
+      padding: 38px 24px;
       text-align: center;
-      border-radius: 24px;
-      padding: 40px 20px;
-      margin-top: 30px;
+      color: #fff;
+      background:
+        radial-gradient(circle at top center, rgba(255,255,255,0.12), transparent 25%),
+        linear-gradient(135deg, #0b1533 0%, #132b6f 45%, #204ee3 100%);
+      box-shadow: 0 24px 60px rgba(15, 35, 90, 0.18);
     }
 
     .cta h2 {
-      font-size: 28px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
       margin-bottom: 10px;
+      font-weight: 800;
     }
 
     .cta p {
-      margin-bottom: 18px;
-      color: #d1d5db;
+      font-size: 17px;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 22px;
     }
 
     .footer {
       text-align: center;
-      color: #6b7280;
+      color: #7a8699;
       font-size: 14px;
-      padding: 25px 10px 10px;
+      padding: 12px 0 32px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px) {
+      .overview {
+        grid-template-columns: 1fr;
+      }
+
+      .step-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .image-box {
+        min-height: 260px;
+      }
     }
 
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 26px;
+      .container {
+        width: min(100% - 20px, 1120px);
       }
 
-      .step-title {
-        font-size: 21px;
+      .hero {
+        padding: 32px 18px 28px;
+        border-radius: 28px;
+      }
+
+      .logo-wrap {
+        width: 124px;
+        height: 124px;
+      }
+
+      .logo {
+        width: 74px;
+        height: 74px;
+      }
+
+      .hero-badge {
+        font-size: 12px;
+        margin-bottom: 14px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+      }
+
+      .section-head {
+        margin: 28px 0 16px;
+      }
+
+      .step-card {
+        padding: 18px;
+        border-radius: 22px;
+      }
+
+      .step-top {
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .step-number {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        font-size: 16px;
+      }
+
+      .image-box {
+        min-height: 220px;
+        border-radius: 18px;
+      }
+
+      .info-box {
+        border-radius: 18px;
+        padding: 16px;
+      }
+
+      .cta {
+        border-radius: 24px;
+        padding: 30px 16px;
       }
     }
   </style>
 </head>
-
 <body>
 
-  <div class="container">
-
+  <div class="container hero-wrap">
     <section class="hero">
-
-      <!-- 🔥 โลโก้ -->
-      <img src="ALLIN ACALOGO.jpg" class="logo">
-
-      <h1>วิธีเปิดพอร์ต Forex</h1>
-      <p>สมัครง่าย ทำตามทีละขั้นตอน ใช้เวลาไม่นาน</p>
-
-      <a class="btn" href="https://is.ivy-markets.com/regist-real?invitid=FY2440-IVY8" target="_blank">
-        เปิดพอร์ตตอนนี้
-      </a>
-
-    </section>
-
-    <!-- STEP 1 -->
-    <section class="card">
-      <h2 class="step-title">Step 1 : กดลิงก์สมัคร</h2>
-      <p class="step-sub">กดลิงก์ด้านล่างเพื่อเริ่มสมัครบัญชีจริง</p>
-
-      <div class="image-box">
-        <img src="step1.png">
+      <div class="hero-top">
+        <div class="logo-wrap">
+          <img src="logo.png" class="logo" alt="All In Academy Logo">
+        </div>
       </div>
 
-      <div class="info-box">
-        <strong>ลิงก์สมัคร:</strong><br>
-        <a href="https://is.ivy-markets.com/regist-real?invitid=FY2440-IVY8" target="_blank">
-          https://is.ivy-markets.com/regist-real?invitid=FY2440-IVY8
-        </a>
+      <div class="hero-content">
+        <div class="hero-badge">ALL IN ACADEMY • OPEN ACCOUNT GUIDE</div>
+        <h1>เปิดพอร์ต Forex<br>เริ่มต้นได้ในไม่กี่ขั้นตอน</h1>
+        <p>สมัครง่าย ตรวจเอกสารไว ทำตามทีละขั้นตอนแล้วเริ่มใช้งานได้ทันที</p>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="https://is.ivy-markets.com/regist-real?invitid=FY2440-IVY8" target="_blank">
+            เปิดพอร์ตตอนนี้
+          </a>
+          <a class="btn-secondary" href="#steps">
+            ดูขั้นตอนทั้งหมด
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- STEP 2 -->
-    <section class="card">
-      <h2 class="step-title">Step 2 : กรอกข้อมูลให้ถูกต้อง</h2>
-      <p class="step-sub">กรอกข้อมูลส่วนตัวให้ครบ และเลือกค่าตามนี้</p>
-
-      <div class="image-box">
-        <img src="step2.png">
+    <div class="overview">
+      <div class="overview-card">
+        <div class="overview-title">Partner Code</div>
+        <div class="overview-text">FY2440-IVY8</div>
       </div>
-
-      <div class="info-box">
-        <strong>กรอกตามนี้</strong>
-        <ul>
-          <li>Partner Code : FY2440-IVY8</li>
-          <li>ประเภทบัญชี : STANDARD</li>
-          <li>สกุลเงิน : USD เท่านั้น</li>
-        </ul>
+      <div class="overview-card">
+        <div class="overview-title">ประเภทบัญชี</div>
+        <div class="overview-text">STANDARD</div>
       </div>
-    </section>
-
-    <!-- STEP 3 -->
-    <section class="card">
-      <h2 class="step-title">Step 3 : ยืนยันตัวตน (KYC)</h2>
-      <p class="step-sub">อัปโหลดเอกสารเพื่อยืนยันตัวตนให้เรียบร้อย</p>
-
-      <div class="image-box">
-        <img src="step3.png">
+      <div class="overview-card">
+        <div class="overview-title">สกุลเงิน</div>
+        <div class="overview-text">USD เท่านั้น</div>
       </div>
+    </div>
+  </div>
 
-      <div class="info-box">
-        <strong>เอกสารที่อาจใช้</strong>
-        <ul>
-          <li>บัตรประชาชน หรือ Passport</li>
-          <li>เอกสารยืนยันที่อยู่ (ถ้ามี เช่น บิล/Statement)</li>
-        </ul>
-      </div>
-    </section>
+  <main class="container section-space" id="steps">
+    <div class="section-head">
+      <span>Step by Step</span>
+      <h2>ทำตามทีละข้อได้เลย</h2>
+      <p>ครบตั้งแต่สมัคร กรอกข้อมูล ยืนยันตัวตน ฝากเงิน และส่งหลักฐาน</p>
+    </div>
 
-    <!-- STEP 4 -->
-    <section class="card">
-      <h2 class="step-title">Step 4 : ฝากเงินเข้าพอร์ต</h2>
-      <p class="step-sub">หลังสมัครเสร็จ ให้ฝากเงินเพื่อเริ่มใช้งาน</p>
+    <section class="steps">
 
-      <div class="image-box">
-        <img src="step4.png">
-      </div>
+      <article class="step-card">
+        <div class="step-top">
+          <div class="step-number">1</div>
+          <div class="step-heading">
+            <h3>กดลิงก์สมัคร</h3>
+            <p>เริ่มต้นด้วยการกดลิงก์เปิดบัญชีจริงจากปุ่มด้านล่าง</p>
+          </div>
+        </div>
 
-      <div class="info-box">
-        <strong>คำแนะนำ</strong>
-        <ul>
-          <li>แนะนำฝากขั้นต่ำ 100 USD</li>
-          <li>ใช้สิทธิ์รับ Indicator ได้ง่ายขึ้น</li>
-        </ul>
-      </div>
-    </section>
+        <div class="step-layout">
+          <div class="image-box">
+            <img src="step1.png" alt="step1">
+          </div>
 
-    <!-- STEP 5 -->
-    <section class="card">
-      <h2 class="step-title">Step 5 : ส่งหลักฐานให้แอดมิน</h2>
-      <p class="step-sub">สมัครและฝากเสร็จแล้ว แคปหน้าจอส่งให้แอดมินเพื่อรับสิทธิ์</p>
+          <div class="info-box">
+            <h4>ลิงก์สมัคร</h4>
+            <p>กดลิงก์นี้เพื่อเริ่มสมัครบัญชีจริงได้ทันที</p>
+            <div class="link-box">
+              <a href="https://is.ivy-markets.com/regist-real?invitid=FY2440-IVY8" target="_blank">
+                https://is.ivy-markets.com/regist-real?invitid=FY2440-IVY8
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
 
-      <div class="image-box">
-        <img src="step5.png">
-      </div>
+      <article class="step-card">
+        <div class="step-top">
+          <div class="step-number">2</div>
+          <div class="step-heading">
+            <h3>กรอกข้อมูลให้ถูกต้อง</h3>
+            <p>กรอกข้อมูลส่วนตัวให้ครบ และเลือกค่าตามที่กำหนด</p>
+          </div>
+        </div>
 
-      <div class="info-box">
-        <strong>หลังส่งแล้วสามารถรับ</strong>
-        <ul>
-          <li>Indicator</li>
-          <li>Signal Room</li>
-          <li>การดูแลจากทีมงาน</li>
-        </ul>
-      </div>
+        <div class="step-layout">
+          <div class="image-box">
+            <img src="step2.png" alt="step2">
+          </div>
+
+          <div class="info-box">
+            <h4>กรอกตามนี้</h4>
+            <ul>
+              <li>Partner Code : FY2440-IVY8</li>
+              <li>ประเภทบัญชี : STANDARD</li>
+              <li>สกุลเงิน : USD เท่านั้น</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="step-card">
+        <div class="step-top">
+          <div class="step-number">3</div>
+          <div class="step-heading">
+            <h3>ยืนยันตัวตน (KYC)</h3>
+            <p>อัปโหลดเอกสารยืนยันตัวตนให้เรียบร้อยก่อนเริ่มใช้งาน</p>
+          </div>
+        </div>
+
+        <div class="step-layout">
+          <div class="image-box">
+            <img src="step3.png" alt="step3">
+          </div>
+
+          <div class="info-box">
+            <h4>เอกสารที่อาจใช้</h4>
+            <ul>
+              <li>บัตรประชาชน หรือ Passport</li>
+              <li>เอกสารยืนยันที่อยู่ เช่น บิล หรือ Statement</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="step-card">
+        <div class="step-top">
+          <div class="step-number">4</div>
+          <div class="step-heading">
+            <h3>ฝากเงินเข้าพอร์ต</h3>
+            <p>หลังสมัครเสร็จ ให้ฝากเงินเพื่อเริ่มใช้งานบัญชีจริง</p>
+          </div>
+        </div>
+
+        <div class="step-layout">
+          <div class="image-box">
+            <img src="step4.png" alt="step4">
+          </div>
+
+          <div class="info-box">
+            <h4>คำแนะนำ</h4>
+            <ul>
+              <li>แนะนำฝากขั้นต่ำ 100 USD</li>
+              <li>ช่วยให้เริ่มใช้งานและรับสิทธิ์ต่างๆ ได้สะดวกขึ้น</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="step-card">
+        <div class="step-top">
+          <div class="step-number">5</div>
+          <div class="step-heading">
+            <h3>ส่งหลักฐานให้แอดมิน</h3>
+            <p>สมัครและฝากเสร็จแล้ว ส่งหลักฐานเพื่อรับสิทธิ์จากทีมงาน</p>
+          </div>
+        </div>
+
+        <div class="step-layout">
+          <div class="image-box">
+            <img src="step5.png" alt="step5">
+          </div>
+
+          <div class="info-box">
+            <h4>หลังส่งแล้วสามารถรับ</h4>
+            <ul>
+              <li>Indicator</li>
+              <li>Signal Room</li>
+              <li>การดูแลจากทีมงาน</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
     </section>
 
     <section class="cta">
       <h2>พร้อมเริ่มแล้วใช่ไหม?</h2>
-      <p>กดสมัครได้เลย และทำตามขั้นตอนด้านบนทีละข้อ</p>
-      <a class="btn" href="https://is.ivy-markets.com/regist-real?invitid=FY2440-IVY8" target="_blank">
+      <p>กดสมัครแล้วทำตามขั้นตอนด้านบนได้เลย ใช้เวลาไม่นาน</p>
+      <a class="btn-primary" href="https://is.ivy-markets.com/regist-real?invitid=FY2440-IVY8" target="_blank">
         สมัครเปิดพอร์ต
       </a>
     </section>
@@ -284,8 +704,7 @@
     <div class="footer">
       All In Academy
     </div>
-
-  </div>
+  </main>
 
 </body>
 </html>
