@@ -81,21 +81,21 @@
       color: #4b5563;
     }
 
+    /* 🔥 แก้ใหม่ */
     .image-box {
       width: 100%;
-      height: 260px;
+      aspect-ratio: 16/9;
       border-radius: 16px;
       overflow: hidden;
       margin-bottom: 18px;
       background: #f8fafc;
     }
 
-    /* 🔥 ตัวสำคัญ (แก้ปัญหารูปล้น + ครอปล่าง) */
     .image-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top;
+      object-position: center 20%; /* เห็นช่วงบนมากขึ้น */
     }
 
     .info-box {
@@ -144,10 +144,6 @@
 
       .step-title {
         font-size: 21px;
-      }
-
-      .image-box {
-        height: 200px;
       }
     }
   </style>
